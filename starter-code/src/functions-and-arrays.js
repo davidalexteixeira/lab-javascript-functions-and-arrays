@@ -1,6 +1,21 @@
 // Find the maximum
+function maxOfTwoNumbers(a, b){
+  if(a > b) 
+    return a;
+  else 
+    return b;
+}
 
 // Finding Longest Word
+
+function findLongestWord(array){
+  var arr = array.sort(function(a, b){
+    return b.length - a.length;
+  }, 0)
+
+  return arr[0];
+}
+
 var words = [
   'mystery',
   'brother',
@@ -13,13 +28,49 @@ var words = [
 
 // Calculating a Sum
 
+function sumArray(array){
+  var result = 0;
+  for(var index = 0; index < array.length; index++){
+    result+=array[index];
+  }
+  return result;
+//  return array.reduce(function(a,b){
+    // return a + b;
+  // })
+
+}
+
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // Calculate the Average
+function averageNumbers(array){
+  if(array.length === 0){
+    return undefined;
+  }
+
+  return array.reduce(function(a, b){
+    return a + b;
+  }, 0) / array.length;
+
+}
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 // Array of Strings
+
+function averageWordLength(array){
+  if(array.length === 0){
+    return undefined;
+  }
+
+   var wordAvg = 0;
+   for(var index = 0; index < array.length; index++){
+     wordAvg += array[index].length;
+   }
+   return wordAvg / array.length;
+
+}
+
 var wordsArr = [
   'seat',
   'correspond',
@@ -34,6 +85,23 @@ var wordsArr = [
 ];
 
 // Unique Arrays
+
+function uniquifyArray(array){
+  
+  var unique = [];
+
+  for(index = 0; index < array.length; index++){
+    if(unique.indexOf(array[index]) === -1){
+      unique.push(array[index]);
+    }
+  }
+  if(array.length === 0) {
+    return undefined;
+  }
+  return unique;
+
+}
+
 var wordsUnique = [
   'crab',
   'poison',
@@ -49,6 +117,16 @@ var wordsUnique = [
 ];
 
 // Finding Elements
+function doesWordExist(array, a){
+ 
+if(array.includes(a)){
+  return true;
+}else {
+  return false;
+}
+
+}
+
 var wordsFind = [
   'machine',
   'subset',
@@ -61,6 +139,27 @@ var wordsFind = [
 ];
 
 // Counting Repetion
+
+function howManyTimes(array, b){
+
+  if(array.length === 0){
+    return false;
+  }
+
+  if (array.filter(x => x === b).length == 1){
+    return 1;
+  } 
+
+  if(array.filter(x => x === b).length == 5){
+    return 5;
+  }
+ 
+  if(!array.includes(b)) {
+    return 0;
+  } 
+
+}
+
 var wordsCount = [
   'machine',
   'matter',
