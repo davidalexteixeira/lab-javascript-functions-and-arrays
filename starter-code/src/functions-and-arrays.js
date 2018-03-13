@@ -34,10 +34,6 @@ function sumArray(array){
     result+=array[index];
   }
   return result;
-//  return array.reduce(function(a,b){
-    // return a + b;
-  // })
-
 }
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -62,13 +58,11 @@ function averageWordLength(array){
   if(array.length === 0){
     return undefined;
   }
-
    var wordAvg = 0;
    for(var index = 0; index < array.length; index++){
      wordAvg += array[index].length;
    }
    return wordAvg / array.length;
-
 }
 
 var wordsArr = [
@@ -99,7 +93,6 @@ function uniquifyArray(array){
     return undefined;
   }
   return unique;
-
 }
 
 var wordsUnique = [
@@ -118,13 +111,12 @@ var wordsUnique = [
 
 // Finding Elements
 function doesWordExist(array, a){
- 
-if(array.includes(a)){
-  return true;
-}else {
-  return false;
-}
-
+  
+  if(array.includes(a)){
+    return true;
+  }else {
+    return false;
+  }
 }
 
 var wordsFind = [
@@ -157,7 +149,6 @@ function howManyTimes(array, b){
   if(!array.includes(b)) {
     return 0;
   } 
-
 }
 
 var wordsCount = [
